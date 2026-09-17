@@ -1,0 +1,16 @@
+{
+  "name": "cityride-visual-task-starter",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0 <23"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "data:export": "node scripts/export-data.mjs"
+  },
+  "dependencies": {
+    "echarts": "6.1.0"
+  }
+}

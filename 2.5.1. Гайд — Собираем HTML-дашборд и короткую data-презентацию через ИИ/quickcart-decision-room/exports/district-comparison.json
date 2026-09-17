@@ -1,0 +1,33 @@
+{
+  "export_id": "district-comparison",
+  "snapshot_id": "quickcart-evening-pilot-v1",
+  "generated_at": "2026-07-16T12:00:00Z",
+  "database": "data/quickcart.sqlite",
+  "database_sha256": "818a9c4de89884ef34cef49bce9d3adf1b7a67f79e4f4eaf5e01caf47956f74f",
+  "query": "queries/03-district-comparison.sql",
+  "query_sha256": "36204742c277c17441bd9ebf4e0e484b5967ea8243366c29b2a13433a2d70802",
+  "source_tables": [
+    "delivery_orders"
+  ],
+  "units": {
+    "on_time_rate_pct": "percent"
+  },
+  "rows": [
+    {
+      "district_id": "north",
+      "district_name": "Северный",
+      "period": "2026-06",
+      "completed_orders": 145,
+      "on_time_orders": 137,
+      "on_time_rate_pct": 94.5
+    },
+    {
+      "district_id": "east",
+      "district_name": "Восточный",
+      "period": "2026-06",
+      "completed_orders": 125,
+      "on_time_orders": 113,
+      "on_time_rate_pct": 90.4
+    }
+  ]
+}

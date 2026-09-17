@@ -1,0 +1,28 @@
+{
+  "export_id": "key-metric",
+  "snapshot_id": "quickcart-evening-pilot-v1",
+  "generated_at": "2026-07-16T12:00:00Z",
+  "database": "data/quickcart.sqlite",
+  "database_sha256": "818a9c4de89884ef34cef49bce9d3adf1b7a67f79e4f4eaf5e01caf47956f74f",
+  "query": "queries/01-key-metric.sql",
+  "query_sha256": "2e52b7883d252baecd3f079a3dbeae80885ad0bf5ef9734618c249c1236ae8a1",
+  "source_tables": [
+    "delivery_orders",
+    "dataset_metadata"
+  ],
+  "units": {
+    "on_time_rate_pct": "percent",
+    "target_rate_pct": "percent"
+  },
+  "rows": [
+    {
+      "period": "2026-06",
+      "period_label": "Июнь 2026",
+      "completed_orders": 270,
+      "on_time_orders": 250,
+      "on_time_rate_pct": 92.6,
+      "target_rate_pct": 90,
+      "target_status": "above_target"
+    }
+  ]
+}

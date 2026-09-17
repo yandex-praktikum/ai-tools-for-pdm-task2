@@ -1,0 +1,49 @@
+{
+  "export_id": "decision-limit",
+  "snapshot_id": "quickcart-evening-pilot-v1",
+  "generated_at": "2026-07-16T12:00:00Z",
+  "database": "data/quickcart.sqlite",
+  "database_sha256": "818a9c4de89884ef34cef49bce9d3adf1b7a67f79e4f4eaf5e01caf47956f74f",
+  "query": "queries/04-decision-limit.sql",
+  "query_sha256": "d86144dc8fe01d6e27498d8970829377b48a6256411ad1c3bcd411e5f05aee39",
+  "source_tables": [
+    "dataset_scope",
+    "dataset_metadata"
+  ],
+  "units": {
+    "evidence_status": "categorical",
+    "target_rate_pct": "percent"
+  },
+  "rows": [
+    {
+      "dimension_id": "pilot_sla",
+      "dimension_label": "SLA завершённых заказов пилота",
+      "evidence_status": "verified",
+      "evidence_text": "Завершённые вечерние доставки в Северном и Восточном районах за январь–июнь 2026 года.",
+      "decision_effect": "Поддерживает ограниченный июльский запуск с контролем SLA.",
+      "product_question": "Стоит ли QuickCart в июле 2026 года ограниченно расширить вечерний экспресс-слот 18:00–22:00 в Северном и Восточном районах, сохранив долю доставок вовремя не ниже 90%?",
+      "decision_text": "Ограниченное расширение на один месяц с еженедельным контролем SLA и отдельной проверкой курьерской ёмкости.",
+      "target_rate_pct": 90
+    },
+    {
+      "dimension_id": "future_capacity",
+      "dimension_label": "Курьерская ёмкость после расширения",
+      "evidence_status": "not_available",
+      "evidence_text": "В snapshot нет прогноза доступных курьеров при росте объёма.",
+      "decision_effect": "Не позволяет обещать постоянное расширение без отдельного capacity-check.",
+      "product_question": "Стоит ли QuickCart в июле 2026 года ограниченно расширить вечерний экспресс-слот 18:00–22:00 в Северном и Восточном районах, сохранив долю доставок вовремя не ниже 90%?",
+      "decision_text": "Ограниченное расширение на один месяц с еженедельным контролем SLA и отдельной проверкой курьерской ёмкости.",
+      "target_rate_pct": 90
+    },
+    {
+      "dimension_id": "future_economics",
+      "dimension_label": "Экономика после расширения",
+      "evidence_status": "not_available",
+      "evidence_text": "В snapshot нет затрат и маржи будущего режима.",
+      "decision_effect": "Не позволяет делать вывод о прибыльности расширения.",
+      "product_question": "Стоит ли QuickCart в июле 2026 года ограниченно расширить вечерний экспресс-слот 18:00–22:00 в Северном и Восточном районах, сохранив долю доставок вовремя не ниже 90%?",
+      "decision_text": "Ограниченное расширение на один месяц с еженедельным контролем SLA и отдельной проверкой курьерской ёмкости.",
+      "target_rate_pct": 90
+    }
+  ]
+}

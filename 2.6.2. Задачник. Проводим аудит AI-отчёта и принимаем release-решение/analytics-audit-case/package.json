@@ -1,0 +1,15 @@
+{
+  "name": "analytics-audit-case",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "audit": "node scripts/run-audit.mjs"
+  },
+  "dependencies": {
+    "sql.js": "1.13.0"
+  }
+}

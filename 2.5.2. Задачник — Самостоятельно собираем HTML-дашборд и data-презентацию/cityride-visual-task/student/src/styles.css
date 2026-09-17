@@ -1,0 +1,38 @@
+:root {
+  color: #17212b;
+  background: #f4f7f8;
+  font-family: Inter, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+.workspace {
+  max-width: 760px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 72px 24px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #006c67;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1 { margin: 0; font-size: 32px; }
+
+.intro { max-width: 620px; font-size: 18px; line-height: 1.6; }
+
+.status {
+  margin-top: 32px;
+  padding: 16px;
+  border-left: 4px solid #ea8b2d;
+  background: #ffffff;
+}
+
+code { font-family: "SFMono-Regular", Consolas, monospace; }

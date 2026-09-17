@@ -1,0 +1,59 @@
+{
+  "export_id": "monthly-trend",
+  "snapshot_id": "quickcart-evening-pilot-v1",
+  "generated_at": "2026-07-16T12:00:00Z",
+  "database": "data/quickcart.sqlite",
+  "database_sha256": "818a9c4de89884ef34cef49bce9d3adf1b7a67f79e4f4eaf5e01caf47956f74f",
+  "query": "queries/02-monthly-trend.sql",
+  "query_sha256": "5c115032c8d095ea6d0f5b496ea3f5aec0317524b6985b3aea1a8dc7c3596a53",
+  "source_tables": [
+    "delivery_orders"
+  ],
+  "units": {
+    "on_time_rate_pct": "percent"
+  },
+  "rows": [
+    {
+      "month_id": "2026-01",
+      "month_label": "Январь",
+      "completed_orders": 220,
+      "on_time_orders": 192,
+      "on_time_rate_pct": 87.3
+    },
+    {
+      "month_id": "2026-02",
+      "month_label": "Февраль",
+      "completed_orders": 230,
+      "on_time_orders": 205,
+      "on_time_rate_pct": 89.1
+    },
+    {
+      "month_id": "2026-03",
+      "month_label": "Март",
+      "completed_orders": 240,
+      "on_time_orders": 219,
+      "on_time_rate_pct": 91.3
+    },
+    {
+      "month_id": "2026-04",
+      "month_label": "Апрель",
+      "completed_orders": 250,
+      "on_time_orders": 229,
+      "on_time_rate_pct": 91.6
+    },
+    {
+      "month_id": "2026-05",
+      "month_label": "Май",
+      "completed_orders": 260,
+      "on_time_orders": 240,
+      "on_time_rate_pct": 92.3
+    },
+    {
+      "month_id": "2026-06",
+      "month_label": "Июнь",
+      "completed_orders": 270,
+      "on_time_orders": 250,
+      "on_time_rate_pct": 92.6
+    }
+  ]
+}

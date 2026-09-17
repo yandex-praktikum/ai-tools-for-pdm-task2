@@ -1,0 +1,27 @@
+{
+  "name": "quickcart-decision-room",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "22.18.0",
+    "npm": "10.9.3"
+  },
+  "scripts": {
+    "data:seed": "node scripts/create-database.mjs",
+    "data:export": "node scripts/export-data.mjs",
+    "data:build": "npm run data:seed && npm run data:export",
+    "data:verify": "node scripts/verify-data.mjs",
+    "package:verify": "node scripts/verify-package.mjs",
+    "verify": "npm run data:verify && npm run package:verify && node --check src/main.js && node --check src/evidence.js && node --check scripts/server.mjs",
+    "browser:smoke": "node evidence/run-browser-smoke.mjs",
+    "evidence:windows": "powershell -NoProfile -ExecutionPolicy Bypass -File evidence/capture-windows-terminal.ps1",
+    "dev": "node scripts/server.mjs"
+  },
+  "dependencies": {
+    "echarts": "6.1.0"
+  },
+  "devDependencies": {
+    "playwright-core": "1.61.1"
+  }
+}

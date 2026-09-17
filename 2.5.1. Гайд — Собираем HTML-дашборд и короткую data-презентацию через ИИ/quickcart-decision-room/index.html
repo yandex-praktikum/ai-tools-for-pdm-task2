@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Проверенный локальный дашборд QuickCart для одного решения." />
+    <title>QuickCart Decision Room</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-block">
+        <p class="product-name">QuickCart</p>
+        <p class="product-context">Decision Room · вечерняя экспресс-доставка</p>
+      </div>
+      <div class="mode-switch" role="group" aria-label="Режим просмотра">
+        <button class="mode-button is-active" type="button" data-mode="dashboard" aria-pressed="true">Обзор</button>
+        <button class="mode-button" type="button" data-mode="presentation" aria-pressed="false">Презентация</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="dashboard-view" class="dashboard-view" aria-labelledby="dashboard-title">
+        <div class="decision-band">
+          <div>
+            <p class="eyebrow">Проверенное решение</p>
+            <h1 id="dashboard-title">Загрузка решения из проверенного экспорта…</h1>
+          </div>
+          <div class="target-summary" aria-label="Целевой SLA">
+            <span>Порог</span>
+            <strong id="target-value">—</strong>
+          </div>
+        </div>
+
+        <p class="question-line" id="product-question">Загрузка продуктового вопроса…</p>
+
+        <div class="dashboard-grid">
+          <article class="analysis-panel metric-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">01 · Ключевой показатель</p>
+                <h2>Доля доставок вовремя</h2>
+              </div>
+              <p class="metric-value"><span id="metric-value">—</span><small>%</small></p>
+            </div>
+            <div class="chart-host" id="chart-key-metric" role="img" aria-label="Доля доставок вовремя в июне и целевой порог"></div>
+            <p class="panel-conclusion" id="metric-conclusion">Загрузка проверенного экспорта…</p>
+            <p class="source-line">Источник: <code>key-metric.json</code> · <code>01-key-metric.sql</code></p>
+          </article>
+
+          <article class="analysis-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">02 · Динамика</p>
+                <h2 id="trend-period">Проверенный период</h2>
+              </div>
+              <p class="delta-value" id="trend-delta">—</p>
+            </div>
+            <div class="chart-host" id="chart-monthly-trend" role="img" aria-label="Динамика доли доставок вовремя с января по июнь"></div>
+            <p class="panel-conclusion" id="trend-conclusion">Загрузка проверенного ряда…</p>
+            <p class="source-line">Источник: <code>monthly-trend.json</code> · <code>02-monthly-trend.sql</code></p>
+          </article>
+
+          <article class="analysis-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">03 · Сегменты</p>
+                <h2>Сравнение районов в июне</h2>
+              </div>
+              <span class="basis-tag">знаменатель: завершённые</span>
+            </div>
+            <div class="chart-host" id="chart-district-comparison" role="img" aria-label="Сравнение доли доставок вовремя в двух районах"></div>
+            <p class="panel-conclusion" id="district-conclusion">Загрузка проверенного сравнения…</p>
+            <p class="source-line">Источник: <code>district-comparison.json</code> · <code>03-district-comparison.sql</code></p>
+          </article>
+
+          <article class="analysis-panel limit-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">04 · Ограничение</p>
+                <h2>Граница доказательства</h2>
+              </div>
+              <span class="warning-tag">не прогноз</span>
+            </div>
+            <div class="chart-host" id="chart-decision-limit" role="img" aria-label="Наличие доказательств для решения"></div>
+            <p class="panel-conclusion" id="limit-conclusion">Загрузка проверенной границы…</p>
+            <p class="source-line">Источник: <code>decision-limit.json</code> · <code>04-decision-limit.sql</code></p>
+          </article>
+        </div>
+      </section>
+
+      <section id="presentation-view" class="presentation-view" aria-labelledby="slide-title" hidden>
+        <div class="presentation-toolbar">
+          <div>
+            <p class="eyebrow">QuickCart · аргумент для решения</p>
+            <p class="slide-count" id="slide-count">Экран 1 из 4</p>
+          </div>
+          <div class="slide-nav" role="group" aria-label="Навигация по экранам">
+            <button class="icon-button" id="previous-slide" type="button" title="Предыдущий экран" aria-label="Предыдущий экран">←</button>
+            <div class="slide-dots" id="slide-dots" aria-label="Выбор экрана"></div>
+            <button class="icon-button" id="next-slide" type="button" title="Следующий экран" aria-label="Следующий экран">→</button>
+          </div>
+        </div>
+
+        <article class="presentation-stage">
+          <div class="slide-copy">
+            <p class="eyebrow" id="slide-eyebrow">01 · Ключевой показатель</p>
+            <h1 id="slide-title">Доля доставок вовремя выше целевого порога</h1>
+            <p class="slide-lead" id="slide-lead"></p>
+            <p class="slide-limit" id="slide-limit"></p>
+            <p class="source-line" id="slide-source"></p>
+          </div>
+          <div class="slide-visual">
+            <div class="chart-host presentation-chart" id="presentation-chart" role="img" aria-label="Визуализация текущего экрана"></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="error-state" id="error-state" hidden>
+        <h1>Не удалось прочитать проверенные экспорты</h1>
+        <p id="error-message"></p>
+      </section>
+    </main>
+
+    <script src="/vendor/echarts.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
